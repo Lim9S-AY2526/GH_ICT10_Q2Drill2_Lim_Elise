@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICT Club Verification Drill 2</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- PyScript Core CSS & JS -->
+  <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+  <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+</head>
+<body>
+
+  <div class="card">
+    <h2>ICT Club</h2>
+    <div class="subtitle">Candidate Verification System</div>
+
+    <form onsubmit="return false;">
+      <div class="form-group">
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" placeholder="e.g. Juan">
+      </div>
+
+      <div class="form-group">
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" placeholder="e.g. Dela Cruz">
+      </div>
+
+      <button type="button" class="btn" py-click="verify_candidate">
+        Verify Candidate
+      </button>
+    </form>
+
+    <!-- Result Area -->
+    <div id="result">SYSTEM READY</div>
+  </div>
+
+  <!-- PyScript External -->
+  <py-script src="main.py"></py-script>
+
+</body>
+</html>

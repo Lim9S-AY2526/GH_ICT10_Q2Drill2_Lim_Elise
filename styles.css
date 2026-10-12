@@ -1,0 +1,169 @@
+/* Futuristic Cyberpunk / Robotics Pink Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --neon-pink: #ff2a85;
+  --neon-magenta: #ff007f;
+  --glow-pink: rgba(255, 42, 133, 0.35);
+  --bg-dark: #0f0710;
+  --card-bg: #180d1b;
+  --card-border: #381a3d;
+  --text-main: #fce8f3;
+  --text-dim: #9d6f9a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Share Tech Mono', monospace;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 42, 133, 0.08) 0%, transparent 60%),
+    linear-gradient(rgba(255, 42, 133, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 42, 133, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 30px 30px, 30px 30px;
+}
+
+.card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--card-bg);
+  border: 1px solid var(--neon-pink);
+  border-radius: 4px;
+  padding: 36px 30px;
+  box-shadow: 0 0 25px rgba(255, 42, 133, 0.2),
+              inset 0 0 15px rgba(255, 42, 133, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Corner accent cut for tech look */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 20px 20px 0;
+  border-style: solid;
+  border-color: var(--bg-dark) var(--bg-dark) var(--neon-pink) var(--neon-pink);
+}
+
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  color: var(--neon-pink);
+  font-size: 26px;
+  font-weight: 900;
+  margin: 0 0 4px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px var(--glow-pink);
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  color: var(--neon-pink);
+  margin-bottom: 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--card-border);
+  background-color: #0b050c;
+  color: #ffffff;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 15px;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]::placeholder {
+  color: #5c3559;
+}
+
+input[type="text"]:focus {
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 12px var(--glow-pink);
+  outline: none;
+  background-color: #120814;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #990055 0%, var(--neon-pink) 100%);
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  box-shadow: 0 0 20px var(--neon-pink);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+#result {
+  margin-top: 24px;
+  padding: 14px;
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b050c;
+  border: 1px dashed var(--card-border);
+  color: var(--text-dim);
+  transition: all 0.3s ease;
+}
+
+#result:not(:empty) {
+  border-style: solid;
+  border-color: var(--neon-pink);
+  background-color: rgba(255, 42, 133, 0.1);
+  color: var(--neon-pink);
+  box-shadow: 0 0 15px rgba(255, 42, 133, 0.25);
+}
